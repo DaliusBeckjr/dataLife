@@ -11,23 +11,46 @@
             padding: 0;
             margin: 0;
         }
+        #container {
+            margin: 0 auto;
+            /*there's something up with left and right padding?*/
+            padding: 34px 90px 34px;
+            background-color: aliceblue;
+            font-family: 'Roboto', sans-serif;
+        }
         .box{
             /*background-color: ;*/
-            height: 200px;
-            width: 200px;
+            height: 100px;
+            width: 100px;
             border: 2px solid grey;
 
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: space-around;
+            
+        }
+
+        .space-box {
+            width: 500px;
+            height: 500x;
+            border: 2px solid grey;
+            flex-wrap: wrap;
         }
     </style>
 </head>
 <body>
+    <div id=container>
+        
     <h1>Hello</h1>
 
-    {% if i in range(0,times): %}
-    <p class="box" style="background-color: {{color}};"></p>
-    {% endif %}
-
-
+    {% for i in range(0, times): %}
+            <p class="box" style="background-color: {{color}};"></p>
+            {% endfor %}
+        
+    <div> <!--end of conainter id-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </body>
